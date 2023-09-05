@@ -1,3 +1,6 @@
 [submodule "bramila"]
 	path = bramila
 	url = https://version.aalto.fi/gitlab/BML/bramila.git
+[submodule "nifti_tools"]
+	path = nifti_tools
+	url = https://github.com/sergivalverde/nifti_tools.git

@@ -1,9 +1,14 @@
 
 display('Press any key to start unpacking and preprocessing...')
 pause
-system('git clone https://version.aalto.fi/gitlab/BML/bramila.git')
-downloadHaxbyDataset
+
+%Download repo for preprocessing. By default it asks for SSL certificate
+%which we need to bypass in order to download via MATLAB system command
+system('git -c http.sslVerify=false clone https://version.aalto.fi/gitlab/BML/bramila.git')
+downloadHaxbyDataset % Download haxby dataset version 1.0.0
+
 system('source unzip.sh')
+%%
 unzip_the_gz_BOLD_niis
 transform_anatomical_binary_to_epi_dimensions
 threshold_and_save_the_transformed_binary_masks

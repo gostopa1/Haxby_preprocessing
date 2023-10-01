@@ -1,10 +1,8 @@
 addpath(genpath('./bramila/external/niftitools/'))
 clear
 prefix='haxby_dataset/';
-mms='32mm';
-mask_filename=['./whole_brain_masks/masks/mask_' mms '.nii'];
-mask=load_nii(mask_filename)
-inds=find(mask.img>0.5);
+
+
 
 TR=2.5;
 notps=5;
@@ -12,6 +10,10 @@ notps=5;
 mmsmat={'32mm','16mm','8mm','4mm'}
 for mmsi = mmsmat
     mms = mmsi{1}
+    mask_filename=['./whole_brain_masks/masks/mask_' mms '.nii'];
+    mask=load_nii(mask_filename)
+    inds=find(mask.img>0.5);
+    clear D
     %%
     subj=0;
     for subi=[1 2 3 4 5 6]

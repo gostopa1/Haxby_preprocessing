@@ -31,5 +31,3 @@ for mms_mat ={'32mm','16mm','8mm','4mm'}
         save(['data/IndividualSubjects/' mms '_sub' num2str(subi) '.mat'],'x','y','y_inds');
     end
 end
-
-imagesc(y)

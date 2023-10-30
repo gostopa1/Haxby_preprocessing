@@ -15,7 +15,8 @@ threshold_and_save_the_transformed_binary_masks
 make_haxby_data_to_bramila_format
 make_subjects_input_output_texts
 preprocessing
-%%
+%% If the preprocessing is done in parallel using SLURM, this will throw an error and has to be run after preprocessing is complete
+
 subsample_and_epis
 read_data_and_log_files
 separateSubjectDataAverageTps % Splits the dataset to individual subjects, to allow for independent reading of subjects.
